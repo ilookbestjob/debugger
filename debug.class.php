@@ -51,6 +51,12 @@ class Debug
 
         echo '.red,.red:nth-child(2n){background:#ffab90}';
         echo '.info{padding:0 20px;width:100%;overflow-wrap: break-word;}';
+        echo '.subheader{padding:0 20px;width:100%;overflow-wrap: break-word;}';
+
+
+        echo '.tableheader{display:grid;grid-template-columns:50px 300px 300px;padding:5px 20px;width:100%;overflow-wrap: break-word;}';
+        echo '.tablerow{display:grid;grid-template-columns:50px 300px 300px;padding:5px 20px;width:100%;overflow-wrap: break-word;}';
+        
 
 
 
@@ -58,6 +64,8 @@ class Debug
         echo '</style><body>';
 
         echo '<div class="debuginfo"> <div class="header">Отладочная информация</div>';
+        
+        echo '<div class="subheader">'.$this->debuginfo.'</div>';
         echo '<div style="height:200px;overflow:hidden;overflow-y:scroll;padding:20px;">';
 
         $included_files = get_included_files();
